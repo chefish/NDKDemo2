@@ -1,7 +1,10 @@
 package com.fish.ndkdemo2;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +22,22 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                showMessage();
+                track();
+            }
+        });
+    }
+    public void showMessage()
+    {
+        Log.d("showMessage", "showMessage");
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setTitle("C++调用Android");
+        builder.setMessage("这是一个C++调用Android的例子");
+        builder.show();
+
     }
 
     /**
@@ -26,4 +45,5 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+    public native String track();
 }

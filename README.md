@@ -1,6 +1,8 @@
 # NDKDemo2
 
 ndk的学习工程
+java调用c++
+c++调用java
 
 
 # ref
