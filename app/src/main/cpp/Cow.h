@@ -9,6 +9,7 @@
 class Cow {
 public:
     char *readProcStat();
+    int callJniMethod();
 };
 
 

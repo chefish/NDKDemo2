@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                showMessage();
-                track();
+                track2();
             }
         });
     }
@@ -46,4 +46,5 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
     public native String track();
+    public native String track2();
 }

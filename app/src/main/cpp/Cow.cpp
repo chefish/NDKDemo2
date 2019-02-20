@@ -6,3 +6,9 @@
 char* Cow::readProcStat(){
     return 0;
 }
+
+int Cow::callJniMethod() {
+
+
+    return 444;
+}
