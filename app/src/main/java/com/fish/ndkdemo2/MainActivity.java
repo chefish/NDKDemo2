@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                showMessage();
-                track2();
+                track();
             }
         });
     }
-    public void showMessage()
+    public void showMessage2()
     {
         Log.d("showMessage", "showMessage");
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage("这是一个C++调用Android的例子");
         builder.show();
 
+    }
+
+    public String showMessage()
+    {
+        Log.d("showMessage", "showMessage");
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setTitle("C++调用Android");
+        builder.setMessage("这是一个C++调用Android的例子");
+        builder.show();
+return "a";
     }
 
     /**

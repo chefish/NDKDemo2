@@ -18,8 +18,10 @@ extern "C" {
             jobject thiz) {
         std::string hello = "Hello from PA ++";
 
-        jmethodID notification_method = env->GetMethodID(env->GetObjectClass(thiz),"showMessage","()V");
-        env->CallVoidMethod(thiz,notification_method);
+//        jmethodID notification_method = env->GetMethodID(env->GetObjectClass(thiz),"showMessage2","()V");
+        //注意要加分号
+        jmethodID notification_method2 = env->GetMethodID(env->GetObjectClass(thiz),"showMessage","()Ljava/lang/String;");
+        jstring ret = static_cast<jstring>(env->CallObjectMethod(thiz, notification_method2));
 
         return env->NewStringUTF(hello.c_str());
     }
